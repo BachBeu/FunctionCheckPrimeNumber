@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<button type="button" onclick="display()">Display 10k </button>
+<script>
+    var num;
+    function display() {
+        document.write("Các số nguyên tố nhỏ hơn 10000 là: ");
+        for(let i = 0; i < 10000; i++){
+            if(isPrime(i)){
+                document.write(i + " ");
+            }
+        }
+    }
+    function isPrime(num) {
+        if(num < 2){
+            return false;
+        }
+        let squareRoot = Math.sqrt(num);
+        for(let i = 2; i <= squareRoot; i++){
+            if(num % i == 0){
+                return  false;
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
